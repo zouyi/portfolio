@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+      
+      * {
+        box-sizing: border-box;
+      }
+      
+      .col-1 {width: 8.33%;}
+      .col-2 {width: 16.66%;}
+      .col-3 {width: 25%;}
+      .col-4 {width: 33.33%;}
+      .col-5 {width: 41.66%;}
+      .col-6 {width: 50%;}
+      .col-7 {width: 58.33%;}
+      .col-8 {width: 66.66%;}
+      .col-9 {width: 75%;}
+      .col-10 {width: 83.33%;}
+      .col-11 {width: 91.66%;}
+      .col-12 {width: 100%;}
+      
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+        
+      }
+        
+      [class*="col-"] {
+        float: left;
+        padding-left:10px;
+        padding-right:10px;
+      }
+
+
+      /************************************************************************************
+      STRUCTURE
+      *************************************************************************************/
+       #lefthead{
+          height:100px;
+          background-color: orange;
+        }
+        
+      #righthead{
+          height:100px;
+          background-color: orange;
+
+      }
+      #pagewrap {
+        width: 1024px;
+        margin: 0 auto;
+      }
+      
+      #content {
+        margin-top:30px;
+        height:400px;
+        background-color:yellow;
+      }
+      
+      
+      .bluecol{
+        margin-top:30px;
+         background-color:blue;
+        height:300px;
+        
+      }
+      
+       .greycol{
+        margin-top:30px;
+         background-color:antiquewhite;
+        height:220px;
+        
+      }
+      
+       .greycol2{
+        margin-top:30px;
+         background-color:antiquewhite;
+        height:220px;
+        
+      }
+      
+      /************************************************************************************
+      MEDIA QUERIES
+      *************************************************************************************/
+      /* for 1024px or less */
+      @media screen and (max-width: 1024px) {
+
+        
+      
+      }
+      /* for 768px or less */
+      @media screen and (max-width: 768px) {
+        
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+      
+        
+      #lefthead{
+          height:100px;
+          background-color: orange;
+      }
+        
+      #righthead{
+          margin-top:5px;
+          height:100px;
+          background-color: orange;
+
+      }
+        
+
+      
+      #content {
+        margin-top:20px;
+        height:300px;
+        background-color:yellow;
+      }
+      
+      
+      .bluecol{
+        margin-top:30px;
+        background-color:blue;
+        height:100px;
+        
+      }
+      
+       .greycol{
+  
+        margin-top:30px;
+         background-color:antiquewhite;
+        height:100px;
+        
+      }
+          
+      }
+
+      /* for 320px or less */
+      @media screen and (max-width: 500px) {
+     .col-s-0 {width: 0%;}    
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+      
+
+        #lefthead{
+ 
+
+          height:100px;
+          background-color: orange;
+        }
+        
+        #righthead{
+  
+          height:100px;
+          background-color: orange;
+          margin-top:5px;
+
+        }
+        
+        #content {
+        margin-top:20px;
+        height:140px;
+        background-color:yellow;
+      }
+       
+        .bluecol{
+          margin-top:10px;
+          background-color:blue;
+          height:200px;
+        }
+     
+      
+        .greycol{
+  
+        margin-top:30px;
+         background-color:antiquewhite;
+        height:100px;
+        
+      }
+        
+
+
+      }
+
+ 
+
+    </style>
+  </head>
+  <body>
+   
+      <div class="row">
+      <h1>Responsive Design Demo - change the width of the browser to see the effect</h1>
+    </div>
+    
+
+       <div class="row">
+      <div class="col-6 col-m-12">
+       <div id="lefthead"></div>
+      </div>
+       <div class="col-6 col-m-12">
+       <div id="righthead"></div>
+      </div>
+    </div>
+    
+      <div class="row">
+        <div class="col-12 col-m-12"><section id="content">
+          </section></div>
+      </div>
+      
+      <div class="row">
+        <div class="col-4 col-m-12">
+         <div class="bluecol"></div>
+        </div>
+        
+         <div class="col-4 col-m-12">
+         <div class="bluecol"></div>
+        </div>
+        
+         <div class="col-4 col-m-12">
+         <div class="bluecol"></div>
+        </div>
+      </div>
+      
+       <div class="row">
+        <div class="col-3 col-m-6 col-s-12">
+         <div class="greycol"></div>
+        </div>
+        
+         <div class="col-3 col-m-6 col-s-0">
+         <div class="greycol"></div>
+        </div>
+        
+         <div class="col-3 col-m-6 col-s-0">
+         <div class="greycol"></div>
+        </div>
+         
+          <div class="col-3 col-m-6 col-s-0">
+         <div class="greycol"></div>
+        </div>
+      </div> 
+
+
+
+  </body>
+</html>
