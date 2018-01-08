@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>sth</title>
+  <script>
+    function $(id) {
+      var element = 
+          document.getElementById(id);
+        return element;
+    }
+    
+    function dosomething(id) {
+      var inputValue = $(id).value;
+      alert("You typed in:" + inputValue);
+      
+      var UpperCaseInputValue = inputValue.toUpperCase();
+      alert("Upper case version of your input is: " + UpperCaseInputValue);
+      
+      var numberOfChars = inputValue.length;
+      alert("You typed in" + numberOfChars + "characters");
+      
+      //Check if the input is black
+      if (numberOfChars ==0) 
+          alert ("You did not type in anything:");
+      else
+          alert ("Thank you for your input!");
+      
+      // extract last few characters of the input
+      var partOfInput = inputValue.substring(numberOfChars-3);
+      alert("The first few characters are: " + partOfInput);
+    
+    }
+    
+    </script>
+</head>
+
+<form>
+Input1: <input type="text"
+              id="input1"
+               onchange=dosomething('input1')</input>
+Input2: <input type="text"
+              id="input2"
+               onchange=dosomething('input2')</input>
+</form>
+  
+</html>

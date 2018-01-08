@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>CST Web Creations - Application Form</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link href="form2.css" rel="stylesheet" type="text/css" />
+  
+    <script>
+        function $(id){
+          var element = document.getElementById(id);
+          if( element == null )alert( 'Programmer error: '+ id + ' deos not exist.' );
+          
+          return element;
+        }
+      
+        function testPositionValid(id) {
+            return ($(id).selectedIndex != 0);
+        }
+      
+        function warnPositionInvalid(id) {
+            if ( !testPositionValid(id) ) 
+              alert( "You must select a position");
+        }
+        
+        function testPassedCompValid(id) {
+            return ($(id).checked);
+        }
+      
+        function warnPassedCompInvalid(id) {
+            if ( !testPassedCompValid(id).checked == true) 
+              alert( "You must pass comp 1536 to join");
+        }
+      
+        function monthValidate(id) {
+          
+          var month = $(id).value;
+          
+          //if month exists
+          if (month) {
+              
+              var number = Number(month);
+              if(number<1 || number>12){
+                alert("Month must be between 1 and 12");
+              }
+              //alert("Element is"+typeof(number));
+
+          }
+          
+          
+        }
+      
+        function dayValidate(id) {
+          
+            var day = $(id).value;
+
+          
+            if (day) {
+              var number = Number(day);
+              if(number<1 || number>31){
+                alert("Day must be between 1 and 31");
+              }
+            
+
+          }
+        }
+        
+        function yearValidate(id) {
+          
+          var year = $(id).value;
+
+          
+            if (year) {
+              var number = Number(year);
+              if(number<2018 || number>2999){
+                alert("Day must be between 2018 and 2999");
+              }
+          }
+        }
+      
+      function resumeCheck(id) {
+        
+        var str = $(id).value;
+        
+        if(str){
+          
+            var threeCharacters = str.substring(str.length-3);
+          
+            if(!(threeCharacters == "doc" || threeCharacters == "ocx" || threeCharacters == "pdf")){
+              
+              alert("Your resume must be a doc, docx or pdf file");
+              
+            }  
+         }
+    
+      }
+      
+      function validateEmail(id) {
+        
+        var str = $(id).value;
+        
+        if(str){
+          
+            var suffix = str.split('.')[1];
+            
+            //alert("suffix is"+suffix);
+          
+            if(!(suffix == "ca" || suffix == "org" || suffix == "com")){
+              
+              alert("Your email must end with ca, org or com");
+              
+            }  
+         } else {
+           
+            alert("You must enter your email");
+           
+         }
+    
+      }
+      
+      function validatePhone0(id) {
+        var area1, area2;
+        
+        str0 = $(id).value;
+        str1 = $('txtPhone_1').value;
+        str2 = $('txtPhone_2').value;
+        if(str0 && str1 && str2){
+          
+         
+          area1 = Number(str1);
+          area2 = Number(str2);
+          
+          if(!(str0 == "604" || str0 == "778")) {
+            
+            alert("Area code must be either 604 or 778");
+          
+          }
+          
+          if(!(area1>=200 && area1<=888)) {
+            
+            alert("Area code must be between 200 and 888");
+           
+            
+          }
+          
+          if(!(area2>=1000 && area2<=9999)) {
+            
+            alert("Area code must be between 1000 and 9999");
+            
+            
+          }
+          
+          
+        }
+      }
+      
+      function validatePhone1(id) {
+        var area1, area2;
+        
+        str0 = $('txtPhone_0').value;
+        str1 = $(id).value;
+        str2 = $('txtPhone_2').value;
+        if(str0 && str1 && str2){
+          
+         
+          area1 = Number(str1);
+          area2 = Number(str2);
+          
+          if(!(str0 == "604" || str0 == "778")) {
+            
+            alert("Area code must be either 604 or 778");
+          
+          }
+          
+          if(!(area1>=200 && area1<=888)) {
+            
+            alert("Area code must be between 200 and 888");
+           
+            
+          }
+          
+          if(!(area2>=1000 && area2<=9999)) {
+            
+            alert("Area code must be between 1000 and 9999");
+            
+            
+          }
+          
+          
+        }
+      }
+      
+      function validatePhone2(id) {
+        var area1, area2;
+        
+        str0 = $('txtPhone_0').value;
+        str1 = $('txtPhone_1').value;
+        str2 = $(id).value;
+        if(str0 && str1 && str2){
+          
+         
+          area1 = Number(str1);
+          area2 = Number(str2);
+          
+          if(!(str0 == "604" || str0 == "778")) {
+            
+            alert("Area code must be either 604 or 778");
+          
+          }
+          
+          if(!(area1>=200 && area1<=888)) {
+            
+            alert("Area code must be between 200 and 888");
+           
+            
+          }
+          
+          if(!(area2>=1000 && area2<=9999)) {
+            
+            alert("Area code must be between 1000 and 9999");
+            
+            
+          }
+          
+          
+        }
+      }
+        
+
+      
+      
+    </script>
+
+</head>
+
+<body>
+<div class="header">
+  <div class="header_interior"><img src="images/logo.gif" alt="Logo" width="44" height="44" style="float:left; margin-right:10px;" /> 
+  <h1 class="title">CST Web Creations</h1></div>
+</div>
+<div class="content_body">
+  <div class="content_interior"><div class="left_column"><div class="navigation">
+ <ul class="markermenu">
+<li class="markermenu"><a href="./index.html" >Home</a></li>
+<li class="markermenu"><a href="./table2.html">Services</a></li>
+<li class="markermenu"><a href="./index.html">Portfolio</a></li>
+<li class="markermenu"><a href="./form2.html">Join us</a></li>
+<li class="markermenu"><a href="./index.html" style="border-bottom-width: 0">Contact Us</a></li>        
+</ul> </div>
+
+<div class="navigationbtm"></div>
+ <br />
+ <img src="images/img-2.jpg" alt="sample 2" />
+ </div>
+    <div class="right_column">
+      
+<!-- RIGHT COLUMN START -->
+<form id="CSTform" name="CSTform" enctype="multipart/form-data" method="post"
+	action="http://webdevbasics.net/scripts/demo.php">
+
+<!-- <div class="info"> -->
+<div>
+        <h1>Who we are</h1>
+        <p>We are a group of CST students, past and present, offering our website creation services to non-profit organizations in the lower mainland. We work in teams made up of experts in design, development and project management.</p>
+        <div class="hr"></div>
+        <h2>Join us now!</h2>
+        <p>To join this dynamic group of web developers, fill in the application below and you will be contacted shortly.</p>
+</div>
+
+<ul>
+                
+        
+  <li id="itmPosition">
+        <label class="desc" id="lblPosition" for="selPosition">
+                Which position are you applying for?
+            <span id="reqPosition" class="req">*</span>
+        </label>
+        <div>
+                <select id="selPosition" name="selPosition"
+			class="field select medium" tabindex="1"
+			 onchange="warnPositionInvalid('selPosition')">
+                        <option value="" selected="selected"></option>
+                        <option value="Project Manager">Project Manager</option>
+                        <option value="Graphic Designer">Graphic Designer</option>
+                        <option value="Web Developer">Web Developer</option>
+                        <option value="Database Administrator">Database Administrator</option>
+                </select>
+        </div>
+  </li>
+
+  <li id="itmPassedWeb">
+        <label class="desc" id="lblPassedWeb" for="radPassedWeb_0">
+                Passed Comp 1536?
+                <span id="reqPassedWeb" class="req">*</span>
+        </label>
+        <div class="column">
+                <input id="radPassedWeb_0" name="radPassedWeb"
+                           type="radio" class="field radio"         
+                           value="Yes" tabindex="2"
+			  />
+                <label class="choice" for="radPassedWeb_0">Yes</label>
+                <input onchange="warnPassedCompInvalid('radPassedWeb_1')" id="radPassedWeb_1" name="radPassedWeb"
+                           type="radio" class="field radio"         
+			   value="No" tabindex="3"
+			   />
+                <label class="choice" for="radPassedWeb_1">No</label>
+        </div>
+  </li>
+
+  <li id="itmStartDate">
+        <label class="desc" id="lblStartDate" for="txtStartDate_0">
+                Earliest start date?
+                <span id="reqStartDate" class="req">*</span>
+        </label>
+        <span>
+                <input onchange="monthValidate('txtStartDate_0')" id="txtStartDate_0" name="txtStartDate_0"
+                        type="text" class="field text"          
+			value="" size="2" maxlength="2" tabindex="4"
+		        /> /
+                <label for="txtStartDate_0">MM</label>
+        </span>
+        <span>
+                <input onchange="dayValidate('txtStartDate_1')" id="txtStartDate_1" name="txtStartDate_1"
+                       type="text" class="field text"
+                       value="" size="2" maxlength="2" tabindex="5"
+		       /> /
+                <label for="txtStartDate_1">DD</label>
+        </span>
+        <span>
+                <input onchange="yearValidate('txtStartDate_2')" id="txtStartDate_2" name="txtStartDate_2"
+                       type="text" class="field text"
+                       value="" size="4" maxlength="4" tabindex="6"
+		       />
+                <label for="txtStartDate_2">YYYY</label>
+        </span>
+  </li>
+
+  <li id="itmPortfolio">
+        <label class="desc" id="lblPortfolio" for="txtPortfolio">
+                Portfolio URL
+        </label>
+        <div>
+                <input id="txtPortfolio" name="txtPortfolio"
+                       type="text" class="field text large"
+                       value="http://" maxlength="255" tabindex="7" /> 
+        </div>
+  </li>
+
+  <li id="itmResume" class="altInstruct">
+        <label class="desc" id="lblResume" for="filResume">
+                Attach resume
+        </label>
+        <div>
+		<input onchange="resumeCheck('filResume')" id="filResume" name="filResume" type="file"
+                       class="field file medium"  tabindex="8" />
+        </div>
+        <p class="instruct" id="instructResume"><small>Word or PDF Documents Only</small></p>
+  </li>
+
+  <li id="itmName">
+        <label class="desc" id="lblName" for="txtFirstName">
+                Name
+          <span id="reqName" class="req">*</span>
+        </label>
+        <span>
+                <input id="txtFirstName" name="txtFirstName"
+                       type="text" class="field text" 
+		       value="" size="8" tabindex="11"
+		        />
+                <label for="txtFirstName">First</label>
+        </span>
+        <span>
+                <input id="txtLastName" name="txtLastName" type="text"
+                       class="field text" value="" size="14" tabindex="12"
+		        />
+                <label for="txtLastName">Last</label>
+        </span>
+  </li>
+
+  <li id="itmEmail">
+        <label class="desc" id="lblEmail" for="txtEmail">Email Address
+          <span id="reqEmail" class="req">*</span>
+        </label>
+        <input onchange="validateEmail('txtEmail')" id="txtEmail" name="txtEmail" type="text"
+               class="field text large" value="" maxlength="255"
+               tabindex="13" /> 
+  </li>
+
+  <li id="itmPhone">
+        <label class="desc" id="lblPhone" for="txtPhone_0">Phone
+                <span id="reqPhone" class="req">*</span>
+        </label>
+        <span>
+                <input onchange="validatePhone0('txtPhone_0')" id="txtPhone_0" name="txtPhone_0"
+                       type="text" class="field text" value=""
+		       size="3" maxlength="3" tabindex="14"
+		       /> - 
+                <label for="txtPhone_0">(###)</label>
+        </span>
+        <span>
+                <input onchange="validatePhone1('txtPhone_1')" id="txtPhone_1" name="txtPhone_1" type="text"
+                       class="field text" value="" size="3"
+                       maxlength="3" tabindex="15"
+		       /> - 
+                <label for="txtPhone_1">###</label>
+        </span>
+        <span>
+                <input onchange="validatePhone2('txtPhone_2')" id="txtPhone_2" name="txtPhone_2" type="text"
+                       class="field text" value="" size="4" maxlength="4"
+                       tabindex="16"
+		       />
+                <label for="txtPhone_2">####</label>
+        </span>
+        </li>
+
+        <li id="itmComment">
+                <label id="lblComment" for="taComment">
+                        Any additional information for us</label>
+                <textarea name="taComment" id="taComment" rows="4"
+                        cols="40" tabindex="17"></textarea>
+        </li>        
+
+        <li class="buttons">
+                <input onclick="validatePhone()" tabindex="18" id="saveForm" class="btTxt" type="submit" value="Submit" />
+        </li>
+
+
+</ul>
+</form>
+<!-- RIGHT COLUMN END -->
+        </div> 
+  </div>
+<br clear="all" /></div>
+<div class="footer"><div class="footer-inner">
+<div style="text-align:center;">Copyright � 2009 CST Web Creations | Designed by: <a href="#">Model Student</a></div>
+</div><br clear="all" /></div>
+</body>
+</html>
