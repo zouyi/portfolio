@@ -40,7 +40,7 @@
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="favicon.ico">
 
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+	<!-- <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'> -->
 	
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
@@ -71,33 +71,116 @@
 			<nav id="fh5co-main-nav" role="navigation">
 				<ul>
 					<li><a href="index.html">Home</a></li>
-					<li><a href="portfolio.html">Portfolio</a></li>
+					<li><a href="portfolio.html" class="active">Portfolio</a></li>
                     <li><a href="storytelling.html">Storytelling</a></li>
                     <li><a href="resume.html">Resume</a></li>
-					<li><a href="contact.html" class="active">Contact</a></li>
+					<li><a href="contact.html">Contact</a></li>
 				</ul>
 			</nav>
 		</div>
 	</header>
 
-	<div id="fh5co-contact-section">
+	<div id="fh5co-work-section">
+      
+    
 		<div class="container">
-			<div class="row">
-                <div class="col-md-3"></div>
-				<div class="col-md-6 animate-box">
-                  <h3>You can reach me through following methods.</h3>
-                    <ul class="contact-info">
-						<li><i class="icon-location-pin"></i>Burnaby, BC</li>
-						<li><i class="icon-phone2"></i>(778) 317 3718</li>
-						<li><i class="icon-mail"></i><a href="#">zouyi@live.ca</a></li>
-					</ul>
+			<div class="row text-center">
+               <div class="heading-section text-center">
+                  <h2>Web related</h2>
+               </div>
+      
+				<div class="col-md-4 col-sm-6">
+					<div class="fh5co-grid-work">
+						<div class="work-holder">
+							<a href="#"><img src="images/responsivedesign-small.jpg" alt="Work"></a>
+							<a href="portfolio/lab7.html" class="inner-overlay"><i class="icon-plus"></i></a>
+						</div>
+						<div class="desc">
+							<h3><a href="#">Responsive Design</a></h3>
+							<span>This website is developed to be mobile friendly</span>
+						</div>
+					</div>
 				</div>
-              <div class="col-md-3"></div>
-				
+				<div class="col-md-4 col-sm-6">
+					<div class="fh5co-grid-work">
+						<div class="work-holder">
+							<a href="portfolio/lab5/newspaper.html"><img src="images/newspaper-small.jpg" alt="Work"></a>
+							<a href="portfolio/lab5/newspaper.html" class="inner-overlay inner-overlay-2"><i class="icon-plus"></i></a>
+						</div>
+						<div class="desc">
+							<h3><a href="#">Newspaper</a></h3>
+							<span>This is a newspaper style design translated by HTML and CSS</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<div class="fh5co-grid-work">
+						<div class="work-holder">
+							<a href="portfolio/lab5/lines.html"><img src="images/poster-small.jpg" alt="Work"></a>
+							<a href="portfolio/lab5/lines.html" class="inner-overlay inner-overlay-3"><i class="icon-plus"></i></a>
+						</div>
+						<div class="desc">
+							<h3><a href="#">Poster</a></h3>
+							<span>The is a design translated by HTML and CSS</span>
+						</div>
+					</div>
+				</div>
+          </div>
+				  
+           <div class="row text-center">
+				<div class="col-md-4 col-sm-6">
+					<div class="fh5co-grid-work">
+						<div class="work-holder">
+							<a href="#"><img src="images/booktopia-small.jpg" alt="Work"></a>
+							<a href="portfolio/textbook/frontpage.html"  class="inner-overlay"><i class="icon-plus"></i></a>
+						</div>
+						<div class="desc">
+							<h3><a href="#">Booktopia</a></h3>
+							<span>This is a fictional textbook trading site for a school project</span>
+						</div>
+					</div>
+				</div>
+              
+                <div class="col-md-4 col-sm-6">
+					<div class="fh5co-grid-work">
+						<div class="work-holder">
+							<a href="#"><img src="images/formvalidation-small.jpg" alt="Work"></a>
+							<a href="portfolio/lab9/form2.html"  class="inner-overlay"><i class="icon-plus"></i></a>
+						</div>
+						<div class="desc">
+							<h3><a href="#">JavaScript form validation</a></h3>
+							<span>This form validaton is done by JavaScript</span>
+						</div>
+					</div>
+				</div>
+	
+	
 			</div>
-		</div>
-	</div>
-	<!-- END map -->
+		
+      
+	
+			<div class="row text-center">
+        
+				<div class="heading-section text-center">
+                  <h2>Photoshop</h2>
+               </div>
+      
+				<div class="col-md-4 col-sm-6">
+					<div class="fh5co-grid-work">
+						<div class="work-holder">
+							<a href="#"><img src="images/teddy-small.jpg" alt="Work"></a>
+							<a href="images/teddycafeFinal.jpg" class="inner-overlay"><i class="icon-plus"></i></a>
+						</div>
+						<div class="desc">
+							<h3><a href="#">Project Teddy</a></h3>
+							<span>This is a poster designed for a cafe, with Photoshop</span>
+						</div>
+					</div>
+				</div>
+          </div>
+      </div>
+      </div>
+	
 	<footer>
 		<div id="footer" class="fh5co-border-line">
 			<div class="container">
@@ -118,11 +201,8 @@
 	<script src="js/bootstrap.min.js"></script>
 	<!-- Waypoints -->
 	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Google Map -->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
 	<!-- Owl carousel -->
 	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/google_map.js"></script>
 	<!-- Stellar -->
 	<script src="js/jquery.stellar.min.js"></script>
 

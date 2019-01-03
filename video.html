@@ -40,7 +40,7 @@
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="favicon.ico">
 
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+	<!-- <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'> -->
 	
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
@@ -72,32 +72,44 @@
 				<ul>
 					<li><a href="index.html">Home</a></li>
 					<li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="storytelling.html">Storytelling</a></li>
+                    <li><a href="storytelling.html" class="active">Storytelling</a></li>
                     <li><a href="resume.html">Resume</a></li>
-					<li><a href="contact.html" class="active">Contact</a></li>
+					<li><a href="contact.html">Contact</a></li>
 				</ul>
 			</nav>
 		</div>
 	</header>
 
-	<div id="fh5co-contact-section">
+	<div id="fh5co-work-section">
 		<div class="container">
-			<div class="row">
-                <div class="col-md-3"></div>
-				<div class="col-md-6 animate-box">
-                  <h3>You can reach me through following methods.</h3>
-                    <ul class="contact-info">
-						<li><i class="icon-location-pin"></i>Burnaby, BC</li>
-						<li><i class="icon-phone2"></i>(778) 317 3718</li>
-						<li><i class="icon-mail"></i><a href="#">zouyi@live.ca</a></li>
-					</ul>
+			<div class="row text-center">
+				<div class="col-md-4 col-sm-6">
+					<div class="fh5co-grid-work">
+						<div class="work-holder">
+							<a href="https://youtu.be/8l1-BMk1xFw"><img src="images/11kwoman-small.jpg" alt="Work"></a>
+							<a href="https://youtu.be/8l1-BMk1xFw" class="inner-overlay"><i class="icon-plus"></i></a>
+						</div>
+						<div class="desc">
+							<h3><a href="https://youtu.be/8l1-BMk1xFw">11k Utility Bill Woman</a></h3>
+							<span>This is a video storytelling project done by me with artwork created using Photoshop, and video editting done by Adobe Premiere. <br>In order to create this video, I created a storyboard and wrote the script.</span>
+						</div>
+					</div>
 				</div>
-              <div class="col-md-3"></div>
-				
-			</div>
+				<div class="col-md-4 col-sm-6">
+					<div class="fh5co-grid-work">
+						<div class="work-holder">
+							<a href="https://youtu.be/ZaS1Ym5n0i8"><img src="images/mewmew-small.jpg" alt="Work"></a>
+							<a href="https://youtu.be/ZaS1Ym5n0i8" class="inner-overlay inner-overlay-2"><i class="icon-plus"></i></a>
+						</div>
+						<div class="desc">
+							<h3><a href="https://youtu.be/ZaS1Ym5n0i8">Mewmew Oncampus Sushi</a></h3>
+							<span>This is a video storytelling group project for a fictional restaurant business. I contributed to the writing of screenplay script, directing and provided voice narration for this project.</span>
+						</div>
+					</div>
+				</div>
+		    </div>
 		</div>
 	</div>
-	<!-- END map -->
 	<footer>
 		<div id="footer" class="fh5co-border-line">
 			<div class="container">
@@ -118,11 +130,8 @@
 	<script src="js/bootstrap.min.js"></script>
 	<!-- Waypoints -->
 	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Google Map -->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
 	<!-- Owl carousel -->
 	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/google_map.js"></script>
 	<!-- Stellar -->
 	<script src="js/jquery.stellar.min.js"></script>
 
